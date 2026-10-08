@@ -2,8 +2,10 @@ from django.urls import path
 # Добавляем в импорт контроллеры
 from catalog.views import home_view, categories_view, orders_view, contacts_view
 
+
 # исключаем одноименные конфликты
 app_name = 'catalog'
+
 
 urlpatterns = [
     # маршрут для домашней страницы 1
@@ -18,37 +20,3 @@ urlpatterns = [
     # маршрут для страницы 4 контактов с закрывающим /
     path('contacts/', contacts_view, name='21-2_home4'),
 ]
-
-
-
-
-# рабочий вариант
-
-# from django.urls import path
-# from catalog.views import home_view, contacts_view
-#
-# app_name = 'catalog'
-#
-# urlpatterns = [
-#     # Маршрут для домашней страницы
-#     path('', home_view, name='21-2_home1'),
-#     # Маршрут для страницы контактов с закрывающим /
-#     path('contacts/', contacts_view, name='21-2_home4'),
-# ]
-
-
-
-
-
-
-# мой изначально
-
-# from django.urls import path
-# from catalog.apps import CatalogConfig
-# from catalog.views import home
-#
-# app_name = CatalogConfig.name
-#
-# urlpatterns = [
-#     path('', home, name='home')
-# ]

@@ -98,8 +98,15 @@
         <h1 class="display-5 text-center">Контакты</h1>
         <div class="content-grid">
             <div class="col-form">
+                {% if success_message %}
+                <div class="alert alert-success mb-3" role="alert">
+                    {{ success_message }}
+                </div>
+                {% endif %}
+
                 <div class="form-card">
-                    <form action="/submit-contacts" method="POST">
+                    <form method="POST">
+                        {% csrf_token %}
                         <div class="mb-3">
                             <label for="inputName" class="form-label">Имя</label>
                             <input type="text" class="form-control" id="inputName" name="name" required>
