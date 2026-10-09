@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def home_view(request):
     """Контроллер главной страницы"""
-    return render(request, 'catalog/21-2_home1.html')
+    return render(request, 'catalog/home.html')
 
 
 def categories_view(request):
@@ -34,4 +34,4 @@ def contacts_view(request):
         # Передаем текст сообщения в HTML-шаблон
         context['success_message'] = 'Спасибо! Ваше сообщение успешно отправлено.'
 
-    return render(request, 'catalog/21-2_home4.html', context)
+    return render(request, 'catalog/contacts.html', context)
